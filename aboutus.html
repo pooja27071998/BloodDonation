@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>About Us</title>
+	<link rel="stylesheet" type="text/css" href="blood.css">
+</head>
+<body>
+<div class="head" id="home"> 
+ 	<img src="rsz_201705-veradas.jpg" class="head_img">
+ 	<nav>
+ 	<div class="navid" >
+ 	<a href=index.html>HOME</a> 
+ 	<a href=donor.html>REGISTER</a>
+ 	<a href=tips.html>BLOOD DONATION TIPS</a>
+ 	<a href=#>ABOUT US</a>
+ 	<a href=#contact>CONTACT US</a>
+ 	
+ 	</div>
+ 	</nav>
+ </div>
+
+<script type="text/javascript">
+	if (window.XMLHttpRequest) {
+		xmlhttp=new XMLHttpRequest();
+	}
+
+	else{
+		xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+	}
+
+	xmlhttp.open("GET","aboutus.xml",false);
+	xmlhttp.send();
+	xmlDoc=xmlhttp.responseXML;
+
+
+</script>
+<div id="contact">
+	<center>
+		<h3>CONTACT US</h3><br>
+		Sai Help Centre,Kurla,Mumbai 400800.<br>
+		Contact: 123456<br>
+		Email: saihelp@gmail.com<br>
+		&copy; All rights reserved<br>
+	</center>
+	
+</div>
+</body>
+</html>

@@ -1,0 +1,36 @@
+
+
+
+name{
+
+	background-color: lightblue;
+	color: white;
+	outline-color: black;
+	border-radius: 25px;
+	display: block;
+	margin: 25px;
+	font-size: 30px;
+
+}
+
+owners{
+
+	background-color: pink;
+	border-radius: 15px;
+	display: block;
+	margin: 25px;
+	font-size: 20px;
+
+}
+oname,description{
+	color: black;
+	border-radius: 5px;
+	display: inline-table;
+	margin: 15px;
+	font-size: 25px;
+	table-layout: auto;
+
+}
+
+
+

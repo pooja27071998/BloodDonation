@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?xml-stylesheet type="text/css" href="blood.css"?>   
+<!DOCTYPE name[
+<!ELEMENT xtitle (#PCDATA)>
+<!ELEMENT owners (xtitle,oname,description?,Image)>
+<!ELEMENT xtitle (#PCDATA)>
+<!ELEMENT oname (#PCDATA)>
+<!ELEMENT description (#PCDATA)>
+
+]>
+
+
+<name>
+
+	<xtitle>About Us</xtitle>
+	<owners>
+		<Image src="sbcltr-blood-donation.jpg"/>
+		<oname>ABC</oname>
+			<description>“ Started as a good work of donating blood, and  thought of helping those in need ,with  support of family and friends helped me to create this website. Keeping everyone updated in terms of health and blood is not just my duty but it’s my responsibility too..”  
+				---Founder </description>
+			
+	</owners>
+
+	<owners>
+		<oname>xyz</oname>
+			<description>“ I Always love to help people,take care of them. Hence this is a very good platform for this,as if I am very little also involved in any ones happiness makes me happy too...” 
+				---Founder</description>
+			
+	</owners>
+
+	<owners>
+		<oname>pqr</oname>
+			<description>“Donating blood means saving one's life. Hence this inspired me to be a part of a blood donation campaign” 
+				---Founder</description>
+			
+	</owners>
+
+</name>

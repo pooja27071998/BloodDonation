@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Donor Form</title>
+	<link rel="stylesheet" type="text/css" href="blood.css">
+	<script type="text/javascript" src="donor_form.js"></script>
+	<script type="text/javascript">
+            function showMsg(str){
+            	var xmlhttp = new XMLHttpRequest();
+                xmlhttp.onreadystatechange = function(){
+                if(this.readyState == 4 && this.status == 200){
+            	if(this.responseText=='Valid email'){
+              			invalid.style.color='green';
+                }
+          		
+          		else {
+          			invalid.style.color='red';
+      				   }
+                document.getElementById('invalid').innerHTML =this.responseText;
+              }
+               }
+             
+                xmlhttp.open("GET","valid.php?qa="+str,true);
+                xmlhttp.send();
+              
+            }
+          </script>
+</head>
+<body>
+<div class="bgimage"></div>
+<div class="content">
+	<nav>
+ 	<div class="navid" >
+ 	<a href=index.html>HOME</a> 
+ 	<a href=#donor>REGISTER</a>
+ 	<a href=tips.html>BLOOD DONATION TIPS</a>
+ 	<a href=aboutus.html>ABOUT US</a>
+ 	<a href=#contact>CONTACT US</a>
+ 	</div>
+ 	</nav>
+
+<div class="left"></div>
+<br><br><br><br>
+<h1><center>Registration Form</center></h1>
+<div class="center">
+<form name="myForm" method="post" action="donor_database.php" onsubmit="return(validateForm());">
+	<div class="form_div">
+		<br>
+		<span style="color:red"><strong>LOGIN INFORMATION</strong></span><br><br>
+	   Name : <input type="text" name="donor_name">&nbsp;<span style="color: red">*</span><br><br>		
+	   Email: <input type="text" name="donor_email" onkeyup="showMsg(this.value)">&nbsp;<span style="color: red">*</span><br><br>
+	   <div id="invalid" style="color: red"></div>
+	   Password: <input type="password" name="donor_password">&nbsp;<span style="color: red">*</span><br><br>
+	   Confirm Password: <input type="password" name="donor_confirmpassword">&nbsp;<span style="color: red">*</span><br><br>
+	</div>
+	<br><br><br>
+	<div class="form_div">
+		<br>
+		<span style="color: red"><strong>DONOR INFORMATION</strong></span><br><br>
+		Age: <input type="text" name="donor_age">&nbsp;<span style="color: red">*</span><br><br>
+		Blood Group: <select name="donor_bloodgroup">
+			<option>A+</option>
+			<option>A-</option>
+			<option>B+</option>
+			<option>B-</option>
+			<option>AB+</option>
+			<option>AB-</option>
+			<option>O+</option>
+			<option>O-</option>
+		</select>&nbsp;<span style="color: red">*</span><br><br>
+		Weight: <input type="text" name="donor_weight">&nbsp;<span style="color: red">*</span><br><br>
+		How often do you donate blood?<br><input type="text" name="donor_ques">
+		&nbsp;<span style="color: red">*</span><br><br>
+
+	</div>
+	<br><br><br>
+	<div class="form_div">
+		<br>
+		<span style="color: red"><strong>CONTACT INFORMATION</strong></span><br><br>
+		Contact No.: <input type="text" name="donor_contact">&nbsp;<span style="color: red">*</span><br><br>
+		Address: <textarea name="donor_address"></textarea>&nbsp;<span style="color: red">*</span><br><br>
+	</div>
+	<br>
+	&nbsp;&nbsp;&nbsp;<span style="color: red" >Fields marked * are mandatory to be filled</span><br><br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="submit" name="Register" style="border-radius:5px; background-color: red; font-size: 16px; color: white; padding: 10px 30px;">
+	&nbsp;&nbsp;&nbsp;
+	<input type="reset" style="border-radius:5px; background-color: red; font-size: 16px; color: white; padding: 10px 30px;">
+	<br><br>
+
+</form>
+</div>
+
+
+<div id="contact">
+	<center>
+		<h3>CONTACT US</h3><br>
+		Sai Help Centre,Kurla,Mumbai 400800.<br>
+		Contact: 123456<br>
+		Email: saihelp@gmail.com<br>
+		&copy; All rights reserved<br>
+	</center>
+	
+</div>
+</div> 
+</body>
+</html>

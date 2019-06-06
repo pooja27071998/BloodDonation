@@ -1,0 +1,17 @@
+body{
+	background-image: url(bigstock-charity-health-care-donation-2.jpg);
+}
+
+.left{
+  float: left;
+  width: 20%;
+  margin:auto;
+  display: inline-block;
+}
+
+.center{
+  float: right;
+  width: 60%;
+  margin: auto;
+  display: inline-block;
+}
